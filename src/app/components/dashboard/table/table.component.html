@@ -1,0 +1,32 @@
+<div class="container-fluid my-5 text-center">
+  <div class="container">
+
+
+    <button class="button-86 my-3 mb-4" routerLink="/Product/Add" role="button">Add New Product</button>
+
+  <table class="table table-striped table-bordered text-center border-warning-subtle">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Category</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prd of prdList;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{prd.title}}</td>
+        <td>{{prd.price|currency}}</td>
+        <td>{{prd.quantity}}</td>
+        <td>{{prd.category}}</td>
+        <td>
+          <i class="fa-solid fa-pen-to-square"></i>
+          <i class="fa-solid fa-trash-can" (click)="removePrd(prd.id)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

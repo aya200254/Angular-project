@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BodyComponent } from './body.component';
+import { AddFrmComponent } from './add-frm.component';
 
-describe('BodyComponent', () => {
-  let component: BodyComponent;
-  let fixture: ComponentFixture<BodyComponent>;
+describe('AddFrmComponent', () => {
+  let component: AddFrmComponent;
+  let fixture: ComponentFixture<AddFrmComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BodyComponent]
+      declarations: [AddFrmComponent]
     });
-    fixture = TestBed.createComponent(BodyComponent);
+    fixture = TestBed.createComponent(AddFrmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

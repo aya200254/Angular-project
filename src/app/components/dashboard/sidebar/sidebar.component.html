@@ -1,1 +1,75 @@
-<p>sidebar works!</p>
+
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div>
+    <div class="brand-logo d-flex justify-content-center">
+      <a class="text-nowrap ">
+        <img src="assets/logo.png"  alt="" />
+      </a>
+      <div class="" id="sidebarCollapse">
+        <h2>E-commerce</h2>
+      </div>
+    </div>
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+      <ul id="sidebarnav">
+        <li class="nav-small-cap">
+          <span class="hide-menu">Home</span>
+        </li>
+        <li class="sidebar-item" routerLink="/Home" routerLinkActive="s" >
+          <a class="sidebar-link" aria-expanded="false">
+            <span>
+              <i class="fa-solid fa-chalkboard"></i>
+            </span>
+            <span class="hide-menu" routerLink="/Products">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-small-cap">
+
+          <span class="hide-menu">Products</span>
+        </li>
+        <li class="sidebar-item" routerLink="/Products" routerLinkActive="s">
+          <a class="sidebar-link" aria-expanded="false">
+            <span>
+              <i class="fa-brands fa-product-hunt"></i>
+            </span>
+            <span class="hide-menu">All Products</span>
+          </a>
+        </li>
+        <br>
+        <li class="sidebar-item" routerLink="/Product/Add" routerLinkActive="s">
+          <a class="sidebar-link" aria-expanded="false">
+            <span>
+              <i class="fa-solid fa-cart-plus"></i>
+            </span>
+            <span class="hide-menu">Add New Product</span>
+          </a>
+        </li>
+        <li class="nav-small-cap">
+
+          <span class="hide-menu">AUTH</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" aria-expanded="false">
+            <span>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </span>
+            <span class="hide-menu">Login</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" aria-expanded="false">
+            <span>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </span>
+            <span class="hide-menu">Register</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
+

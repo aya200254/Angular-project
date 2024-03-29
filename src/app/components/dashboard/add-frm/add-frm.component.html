@@ -1,0 +1,65 @@
+
+<section class="form my-4">
+  <div class="login-form">
+    <div class="container">
+      <h2 class="text-center">Add New Product</h2>
+      <form #userForm="ngForm" (ngSubmit)="AddForm()" class="form-container">
+        <div class="form-group">
+          <label for="productname" class="form-label">Product Name</label>
+          <input #name="ngModel" type="text" class="form-control" id="productname" name="productname" [(ngModel)]="newProduct.title" required pattern="[A-Za-z]+"
+            [ngClass]="{ 'is-valid': name.valid && name.touched, 'is-invalid': name.invalid && name.touched }">
+          <div [hidden]="name.untouched || name.valid" class="alert alert-danger">
+            <small *ngIf="name.errors?.['required']">Product Name is required</small>
+            <small *ngIf="name.errors?.['pattern']">Product Name must contain only letters</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productprice" class="form-label">Price</label>
+          <input #price="ngModel" type="number" class="form-control" id="productprice" name="productprice" [(ngModel)]="newProduct.price" required
+            [ngClass]="{ 'is-valid': price.valid && price.touched, 'is-invalid': price.invalid && price.touched }">
+          <div [hidden]="price.untouched || price.valid" class="alert alert-danger">
+            <small *ngIf="price.errors?.['required']">Price is required</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productdescription" class="form-label">Description</label>
+          <textarea #description="ngModel" class="form-control" id="productdescription" name="productdescription" [(ngModel)]="newProduct.description" required
+            [ngClass]="{ 'is-valid': description.valid && description.touched, 'is-invalid': description.invalid && description.touched }"></textarea>
+          <div [hidden]="description.untouched || description.valid" class="alert alert-danger">
+            <small *ngIf="description.errors?.['required']">Description is required</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productimage" class="form-label">Image</label>
+          <input #image="ngModel" type="file" class="form-control" id="productimage" name="productimage" [(ngModel)]="newProduct.image" >
+
+
+        </div>
+
+        <div class="form-group">
+          <label for="productcategory" class="form-label">Category</label>
+          <input #category="ngModel" type="text" class="form-control" id="productcategory" name="productcategory" [(ngModel)]="newProduct.category" required
+            [ngClass]="{ 'is-valid': category.valid && category.touched, 'is-invalid': category.invalid && category.touched }">
+          <div [hidden]="category.untouched || category.valid" class="alert alert-danger">
+            <small *ngIf="category.errors?.['required']">Category is required</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productquantity" class="form-label">Quantity</label>
+          <input #quantity="ngModel" type="number" class="form-control" id="productquantity" name="productquantity" [(ngModel)]="newProduct.quantity" required
+            [ngClass]="{ 'is-valid': quantity.valid && quantity.touched, 'is-invalid': quantity.invalid && quantity.touched }">
+          <div [hidden]="quantity.untouched || quantity.valid" class="alert alert-danger">
+            <small *ngIf="quantity.errors?.['required']">Quantity is required</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn" [disabled]="userForm.invalid">Add</button>
+      </form>
+    </div>
+  </div>
+</section>
+

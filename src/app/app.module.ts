@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
-import { BodyComponent } from './components/dashboard/body/body.component';
 import { NavbarComponent } from './components/frontend/navbar/navbar.component';
 import { FooterComponent } from './components/frontend/footer/footer.component';
 import { HomepageComponent } from './components/frontend/body/homepage/homepage.component';
@@ -17,6 +16,9 @@ import { ProductsComponent } from './components/frontend/body/homepage/products/
 import { ClientReviewComponent } from './components/frontend/body/homepage/client-review/client-review.component';
 import { ProductItemComponent } from './components/frontend/body/homepage/products/product-item/product-item.component';
 import { CartItemComponent } from './components/frontend/body/cart/cart-item/cart-item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableComponent } from './components/dashboard/table/table.component';
+import { AddFrmComponent } from './components/dashboard/add-frm/add-frm.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,6 @@ import { CartItemComponent } from './components/frontend/body/cart/cart-item/car
     LoginComponent,
     RegisterComponent,
     SidebarComponent,
-    BodyComponent,
     NavbarComponent,
     FooterComponent,
     HomepageComponent,
@@ -34,11 +35,17 @@ import { CartItemComponent } from './components/frontend/body/cart/cart-item/car
     ProductsComponent,
     ClientReviewComponent,
     ProductItemComponent,
-    CartItemComponent
+    CartItemComponent,
+    TableComponent,
+    AddFrmComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

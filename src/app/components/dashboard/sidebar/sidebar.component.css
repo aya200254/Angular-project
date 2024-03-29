@@ -1,0 +1,132 @@
+/* Sidebar container */
+.left-sidebar {
+  background-color: #fff; /* Background color */
+  width: 280px; /* Sidebar width */
+  height: 100%; /* Full height */
+  position: fixed;
+  top: 0; /* Position from the top */
+  left: 0; /* Position from the left */
+  overflow-y: auto; /* Enable vertical scroll */
+  z-index: 1000; /* Sidebar should be above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for sidebar */
+}
+h2{
+  color: #A66E4A;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding-top: 15px;
+}
+
+/* Sidebar navigation */
+.scroll-sidebar {
+  padding: 20px; /* Padding inside the sidebar */
+}
+
+/* Brand logo */
+.brand-logo img {
+  padding-top: 7px;
+  width: 40px;
+
+}
+.brand-logo
+{
+  text-align: center;
+
+  padding-top: 20px;
+}
+/* Sidebar item */
+.sidebar-item {
+  list-style: none; /* Remove default list style */
+  cursor: pointer;
+}
+
+/* Sidebar link */
+.sidebar-link {
+  display: block; /* Display as block for full width */
+  padding: 10px 0; /* Padding for each link */
+  color: #A66E4A;
+  text-decoration: none; /* Remove underline */
+}
+.sidebar-item{
+
+  padding-left: 10px;
+}
+.sidebar-item:hover
+{
+  background-color: #EDE6E1;
+  transition: .5s ease-in-out all;
+  border-radius: 12px;
+}
+.sidebar-item:hover .sidebar-link
+{
+  color: #A66E4A;
+}
+
+.s{
+   background-color: #EDE6E1;
+  transition: .3s ease-in-out all;
+  border-radius: 12px;
+}
+
+/* Active sidebar link */
+.sidebar-item.active .sidebar-link {
+  color: #EDE6E1; /* Active link color */
+}
+
+/* Small cap */
+.nav-small-cap {
+  padding: 10px 0; /* Padding for small cap */
+  color: #3E3C3A;
+  font-size: 14px; /* Font size */
+}
+
+/* Small cap icon */
+.nav-small-cap-icon {
+  margin-right: 5px; /* Margin for the icon */
+}
+
+/* Unlimited access */
+.unlimited-access {
+  padding: 20px; /* Padding */
+  background-color: #f8f9fa; /* Background color */
+  border-radius: 10px; /* Border radius */
+}
+
+/* Unlimited access title */
+.unlimited-access-title h6 {
+  margin-bottom: 10px; /* Margin bottom */
+  font-size: 18px; /* Font size */
+}
+
+/* Unlimited access button */
+.unlimited-access .btn-primary {
+  font-size: 16px; /* Font size */
+}
+
+/* Close button */
+.close-btn {
+  color: #333; /* Icon color */
+  cursor: pointer; /* Cursor style */
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Close button icon */
+.close-btn svg {
+  font-size: 20px; /* Icon size */
+}
+.sidebar-item i
+{
+  margin-right: 10px;
+  font-size: 21px;
+}
+.hide-menu
+{
+  font-size: 18px;
+  margin-top: -5px;
+  /* color: #A66E4A; */
+  font-weight: bold;
+}
+
+
