@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { IProduct } from '../Models/iproduct';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { ICategory } from '../Models/icategory';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,11 @@ export class ProductService {
 
   removePrd(pid: number) {
     return this.http.delete(`${environment.ApiUrl}/products/${pid}`);
+  }
+
+  getAllCat():Observable<ICategory[]>{
+    return this.http.get<ICategory[]>(`${environment.ApiUrl}/category`)
+
   }
 
 

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ICategory } from 'src/app/Models/icategory';
 import { IProduct } from 'src/app/Models/iproduct';
 import { ProductService } from 'src/app/Service/product.service';
 
@@ -8,14 +9,15 @@ import { ProductService } from 'src/app/Service/product.service';
   templateUrl: './add-frm.component.html',
   styleUrls: ['./add-frm.component.css']
 })
-export class AddFrmComponent {
+export class AddFrmComponent implements OnInit{
+  catList:ICategory[]=[];
   newProduct: IProduct = {
     id:0,
     title:'',
     price:0,
     description:'',
     image:'',
-    category:'',
+    categoryID:null,
     quantity:0,
     rating: {
       rate: 0,
@@ -23,6 +25,11 @@ export class AddFrmComponent {
     },
     };
   constructor(private prdSer:ProductService,private router:Router){}
+  ngOnInit(): void {
+    this.prdSer.getAllCat().subscribe((cat)=>{
+      this.catList=cat;
+    });
+  }
 
   AddForm() {
     const observer={

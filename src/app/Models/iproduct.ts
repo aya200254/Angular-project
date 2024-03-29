@@ -8,7 +8,7 @@ export interface IProduct {
     rate: number;
     count: number;
   };
-  category: string;
+  categoryID: number|null;
   quantity: number;
 }
 
